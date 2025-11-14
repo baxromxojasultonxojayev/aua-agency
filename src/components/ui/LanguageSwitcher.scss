@@ -1,0 +1,24 @@
+.lang-switcher {
+  display: inline-flex;
+  padding: 2px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  gap: 2px;
+
+  &__btn {
+    border: none;
+    background: transparent;
+    color: #e5e7eb;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 0.15s ease;
+
+    &--active {
+      background: linear-gradient(135deg, #5b5bff, #ff3fa4);
+      color: #fff;
+    }
+  }
+}

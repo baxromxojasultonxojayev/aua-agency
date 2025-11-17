@@ -1,0 +1,108 @@
+.aua-help {
+  padding: 40px 16px 96px;
+}
+
+.aua-help__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+}
+
+/* umumiy card styling */
+.aua-help__card {
+  position: relative;
+  flex: 1;
+  min-height: 260px;
+  border-radius: 24px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #151515;
+  color: #f9fafb;
+}
+
+/* 1-card: intro + notch */
+.aua-help__card--intro {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 400;
+
+  @media (max-width: 960px) {
+    font-size: 32px;
+  }
+
+  /* o‘ng tomondagi uchlik (notch) */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -14px;
+    transform: translateY(-50%) rotate(45deg);
+    width: 30px;
+    height: 30px;
+    background: #151515; // card foniga teng
+    border-radius: 8px;
+  }
+}
+
+/* 2-3-cards – qora fon */
+.aua-help__card--dark {
+  background: #151515;
+  color: #f9fafb;
+}
+
+/* 4-card – neon accent */
+.aua-help__card--accent {
+  background: #c9ff1f;
+  color: #111827;
+}
+
+/* Matnlar */
+.aua-help__title {
+  margin: 0;
+}
+
+.aua-help__subtitle {
+  margin: 16px 0 10px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.aua-help__subtitle--dark {
+  color: #111827;
+}
+
+.aua-help__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+.aua-help__text--dark {
+  color: #111827;
+}
+
+/* Icon – faqat placeholder sifatida */
+.aua-help__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 250, 252, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.aua-help__icon--dark {
+  border-color: rgba(17, 24, 39, 0.35);
+}

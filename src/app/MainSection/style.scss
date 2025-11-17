@@ -1,31 +1,60 @@
-
-/* HERO SECTION */
+/* ===== HERO SECTION ===== */
 
 .aua-hero {
-  /* 1) Gradient overlay  +  2) Union SVG background */
-  // background-image: linear-gradient(180deg, var(#4B5459) 0%, var(#F7F6F3) 100%);
-  
+  position: relative;
+  overflow: hidden;
+
+  --hero-scale: 1.4; 
+
   background-color: transparent;
-  background-image:
-  
-    url("https://upsense.sg/wp-content/uploads/2024/03/Union-2-1.svg");
 
-      background-position: center center;
-    background-repeat: repeat;
-    background-size: 36% auto;           /* butun hero’ni qoplab turadi */
-
-  /* hero balandligi */
-  min-height: calc(100vh - 140px);       /* header hisobga olingan */
+  min-height: calc(100vh - 140px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* kontent qizil kvadrat ichida bo‘lgan joy */
+.aua-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background-image: url("https://upsense.sg/wp-content/uploads/2024/03/Union-2-1.svg");
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: 46% auto;
+
+  transform-origin: center;
+  transform: scale(var(--hero-scale));
+  opacity: 0.3;
+  transition: transform 0.18s ease-out;
+}
+
+.aua-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  z-index: 1;
+
+  background: linear-gradient(
+    180deg,
+    rgba(75, 84, 89, 0.7) 0%,
+    rgba(75, 84, 89, 0.4) 40%,
+    rgba(247, 246, 243, 0.0) 100%
+  );
+
+  pointer-events: none;
+}
 
 .aua-hero__inner {
+  position: relative;
+  z-index: 2;
   max-width: 960px;
-  // margin: 0 auto;
+  margin: 0 auto;
   padding: 140px 16px 80px;
   text-align: center;
   color: #111;
@@ -59,8 +88,6 @@
   line-height: 1.6;
   color: #4b4b4b;
 }
-
-/* responsiv */
 
 @media (max-width: 768px) {
   .aua-hero {

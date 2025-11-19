@@ -1,0 +1,143 @@
+.aua-projects {
+  padding: 80px 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+
+  &__inner {
+    width: min(1150px, 100%);
+    margin-inline: 20px;
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr);
+    gap: 40px;
+    align-items: flex-start;
+
+    @media (max-width: 992px) {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  /* LEFT SIDE */
+  &__left {
+    max-width: 320px;
+
+    @media (max-width: 992px) {
+      max-width: none;
+    }
+  }
+
+  &__heading {
+    margin: 0 0 20px;
+    font-size: 40px;
+    line-height: 1.05;
+    font-weight: 600;
+    font-family: "Playfair Display", "Georgia", serif;
+  }
+
+  &__description {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #222222;
+  }
+
+  /* RIGHT SIDE */
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* ==== MAIN GRID (3x3) ==== */
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 640px) {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  /* Cards – shared styles */
+  &__card {
+    border-radius: 20px;
+    padding: 18px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+    font-family: "trax", sans-serif; // 🔹 shu section ichidagi kartalar trax’da
+  }
+
+  &__card--primary {
+    background: #004a53; // dark teal
+    color: #ffffff;
+  }
+
+  &__card--secondary {
+    background: #d6ff47; // neon lime
+    color: #032314;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 12px;
+    border: 1px solid rgba(214, 255, 71, 0.7);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(214, 255, 71, 0.1);
+    color: #d6ff47;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 1.7;
+    }
+  }
+
+  &__icon--dark {
+    border-color: rgba(3, 35, 20, 0.5);
+    background: rgba(3, 35, 20, 0.08);
+    color: #032314;
+  }
+
+  &__card-title {
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 500;
+  }
+
+  /* ==== EXTRA SERVICES ==== */
+  &__extra {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__extra-label {
+    margin: 0;
+    font-size: 18px;
+    font-family: "Playfair Display", "Georgia", serif;
+  }
+
+  &__extra-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 640px) {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}

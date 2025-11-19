@@ -1,5 +1,5 @@
 .aua-help {
-  padding: 40px 16px 96px;
+  padding-top: 40px;
 }
 
 .aua-help__inner {
@@ -11,6 +11,8 @@
 
   @media (max-width: 960px) {
     flex-direction: column;
+    /* mobil: kartalar orasidagi masofa kichikroq */
+    gap: 14px;
   }
 }
 
@@ -26,6 +28,14 @@
   justify-content: flex-start;
   background: #151515;
   color: #f9fafb;
+
+  @media (max-width: 960px) {
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: auto; /* balandlik matnga qarab */
+    padding: 20px 18px; /* ichki padding kichikroq */
+    border-radius: 20px; /* yumaloqlik ham kichikroq */
+  }
 }
 
 /* 1-card: intro + notch */
@@ -35,10 +45,15 @@
   font-weight: 400;
 
   @media (max-width: 960px) {
-    font-size: 32px;
+    /* mobil: ingichka pill banner */
+    font-size: 26px;
+    line-height: 1.15;
+    min-height: 72px;
+    padding: 16px 20px;
+    align-items: center;
+    justify-content: center;
   }
 
-  /* o‘ng tomondagi uchlik (notch) */
   &::after {
     content: "";
     position: absolute;
@@ -47,8 +62,13 @@
     transform: translateY(-50%) rotate(45deg);
     width: 30px;
     height: 30px;
-    background: #151515; // card foniga teng
+    background: #151515;
     border-radius: 8px;
+
+    @media (max-width: 960px) {
+      /* mobil’da uchlik kerak emas */
+      display: none;
+    }
   }
 }
 
@@ -64,15 +84,23 @@
   color: #111827;
 }
 
-/* Matnlar */
+/* sarlavha matnlar */
 .aua-help__title {
   margin: 0;
+
+  @media (max-width: 960px) {
+    font-weight: 400;
+  }
 }
 
 .aua-help__subtitle {
   margin: 16px 0 10px;
   font-size: 22px;
   font-weight: 500;
+
+  @media (max-width: 960px) {
+    font-size: 18px;
+  }
 }
 
 .aua-help__subtitle--dark {
@@ -84,13 +112,17 @@
   font-size: 15px;
   line-height: 1.6;
   color: #e5e7eb;
+
+  @media (max-width: 960px) {
+    font-size: 14px;
+  }
 }
 
 .aua-help__text--dark {
   color: #111827;
 }
 
-/* Icon – faqat placeholder sifatida */
+/* Iconlar */
 .aua-help__icon {
   width: 40px;
   height: 40px;
@@ -101,6 +133,12 @@
   justify-content: center;
   margin-bottom: 16px;
   font-size: 18px;
+
+  @media (max-width: 960px) {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
 }
 
 .aua-help__icon--dark {

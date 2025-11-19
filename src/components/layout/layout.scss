@@ -1,18 +1,17 @@
-
 .aua-layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "trax", sans-serif;
 
   &__main {
     flex: 1;
     // max-width: 1120px;
     width: 100%;
     // margin: 0 auto;
-    // padding: 120px 16px 64px; 
+    // padding: 120px 16px 64px;
   }
 }
-
 
 .aua-header {
   position: fixed;
@@ -40,10 +39,9 @@
   align-items: center;
   gap: 32px;
 
-  background: rgba(245, 245, 245, 0.22); 
+  background: rgba(245, 245, 245, 0.22);
   backdrop-filter: blur(14px) saturate(140%);
 }
-
 
 .aua-header__logo {
   display: inline-flex;
@@ -60,7 +58,6 @@
 .aua-header__logo-mark {
   font-weight: 600;
 }
-
 
 .aua-header__nav {
   flex: 1;
@@ -83,7 +80,6 @@
     color: #000;
   }
 }
-
 
 .aua-header__cta {
   display: inline-flex;
@@ -120,9 +116,8 @@
   font-size: 18px;
 }
 
-
 .aua-header__burger {
-  display: none; 
+  display: none;
   margin-left: auto;
   width: 44px;
   height: 44px;
@@ -143,9 +138,7 @@
   border-radius: 999px;
   background: #111;
   transform: translateX(-50%);
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .aua-header__burger span:nth-child(1) {
@@ -159,7 +152,6 @@
 .aua-header__burger span:nth-child(3) {
   top: 28px;
 }
-
 
 .aua-header__burger--open span:nth-child(1) {
   top: 21px;
@@ -179,7 +171,7 @@
 
 .aua-header__mobile {
   position: fixed;
-  top: 108px;           
+  top: 108px;
   left: 0;
   right: 0;
   padding: 0 16px;
@@ -218,7 +210,6 @@
   }
 }
 
-
 @media (max-width: 1024px) {
   .aua-header__nav {
     display: none;
@@ -233,7 +224,6 @@
   }
 }
 
-
 @media (max-width: 768px) {
   .aua-header__pill {
     gap: 16px;
@@ -241,12 +231,11 @@
   }
 }
 
-
 .aua-footer {
-  margin-top: auto;                
+  margin-top: auto;
   background: #d5d5d5;
   color: #111111;
-  border-radius: 40px 40px 0 0;    
+  border-radius: 40px 40px 0 0;
   box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.18);
 }
 
@@ -285,7 +274,6 @@
   font-size: 20px;
 }
 
-
 .aua-footer__cols {
   display: flex;
   flex-wrap: wrap;
@@ -310,7 +298,6 @@
     }
   }
 }
-
 
 .aua-footer__bottom {
   max-width: 1120px;
@@ -339,7 +326,6 @@
     }
   }
 }
-
 
 @media (max-width: 768px) {
   .aua-footer__top {

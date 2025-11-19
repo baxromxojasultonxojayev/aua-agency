@@ -6,7 +6,6 @@ export default function AuaHelpCards() {
   return (
     <section className="aua-help">
       <div className="aua-help__inner">
-        {/* 1-card – intro + notch */}
         <article className="aua-help__card aua-help__card--intro">
           <h3 className="aua-help__title">
             We can
@@ -15,7 +14,6 @@ export default function AuaHelpCards() {
           </h3>
         </article>
 
-        {/* 2-card – Elevate */}
         <article className="aua-help__card aua-help__card--dark">
           <div className="aua-help__icon">^</div>
           <h3 className="aua-help__subtitle">1. Elevate</h3>
@@ -25,7 +23,6 @@ export default function AuaHelpCards() {
           </p>
         </article>
 
-        {/* 3-card – Engage */}
         <article className="aua-help__card aua-help__card--dark">
           <div className="aua-help__icon">✕</div>
           <h3 className="aua-help__subtitle">2. Engage</h3>
@@ -35,7 +32,6 @@ export default function AuaHelpCards() {
           </p>
         </article>
 
-        {/* 4-card – Convert (neon) */}
         <article className="aua-help__card aua-help__card--accent">
           <div className="aua-help__icon aua-help__icon--dark">⬡</div>
           <h3 className="aua-help__subtitle aua-help__subtitle--dark">

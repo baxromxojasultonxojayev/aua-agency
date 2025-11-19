@@ -1,136 +1,193 @@
 .aua-showreel {
-    padding: 80px 16px 0px;
+  padding: 80px 16px 0;
 }
 
 .aua-showreel__inner {
-    position: relative;
-    max-width: 1120px;
-    margin: 0 auto;
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
+/* ===== TOP LEFT LABEL ===== */
 .aua-showreel__label {
-    position: absolute;
-    top: -14px;
-    left: 0px;
-    background-color: #F7F6F3;
-    z-index: 9;
-    padding: 15px 105px 5px 15px;
-    border-radius: 20px 0px 20px 0px;
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    span {
-        visibility: hidden;
-        background-color: transparent !important;
-    }
+  position: absolute;
+  top: -14px;
+  left: 0;
+  background-color: #f7f6f3;
+  z-index: 9;
+  padding: 15px 105px 5px 15px;
+  border-radius: 20px 0 20px 0;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  span {
+    visibility: hidden; // faqat shape uchun
+    background-color: transparent !important;
+  }
 }
 
+/* ===== BOTTOM RIGHT CAPTION ===== */
 .aua-showreel__caption {
-    position: absolute;
-    right: 0px;
-    bottom: -12px;
-    z-index: 9;
-    background-color: #F7F6F3;
-    // max-width: 420px;
-    text-align: right;
-    font-size: 12px;
-    line-height: 1.4;
-    padding: 15px 15px 5px 15px;
-    border-radius: 20px 0px 20px 0px;
-    opacity: 0.4;
-    span {
-        visibility: hidden;
-        background-color: transparent !important;
-    }
+  position: absolute;
+  right: 0;
+  bottom: -12px;
+  z-index: 9;
+  background-color: #f7f6f3;
+  text-align: right;
+  font-size: 12px;
+  line-height: 1.4;
+  padding: 15px 15px 5px 15px;
+  border-radius: 20px 0 20px 0;
+  opacity: 0.4;
+
+  span {
+    visibility: hidden;
+    background-color: transparent !important;
+  }
 }
 
+/* ===== TOP CENTER PILL (UNMUTE) ===== */
 .aua-showreel__toggle {
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 15px 58px;
-    border-radius: 0px 0px 20px 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 58px;
+  border-radius: 0 0 20px 20px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  z-index: 9;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+  background-color: #f7f6f3;
+  color: #fff;
 
-    border: none;
-    font-size: 13px;
-    cursor: pointer;
-    z-index: 1;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
-    background-color: #F7F6F3;
-    color: white;
-   span{
-        visibility: hidden;
-    
-}
-    &:hover {
-        transform: translateX(-50%) translateY(-1px);
-        background: #000;
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
-    }
+  span {
+    visibility: hidden;
+  }
+
+  &:hover {
+    transform: translateX(-50%) translateY(-1px);
+    background: #000;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+  }
 }
 
-/* Katta kartochka – Upsense’dagi blokga o‘xshash */
+/* ===== MAIN FRAME ===== */
 .aua-showreel__frame {
-    position: relative;
-    border-radius: 36px;
-    background: radial-gradient(circle at top left, #eef2ff, #dbeafe);
-    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
-    border: 1px solid rgba(148, 163, 184, 0.4);
-
-    //   padding: 28px 32px 36px; // ichki “air”
+  position: relative;
+  border-radius: 36px;
+  background: radial-gradient(circle at top left, #eef2ff, #dbeafe);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.4);
 }
 
-/* Video joylashgan haqiqiy container */
+/* Video container */
 .aua-showreel__video-shell {
-    position: relative;
-    border-radius: 30px;
-    overflow: hidden;
-    background: #000; // video yuklanayotganda qora fon
-    aspect-ratio: 16 / 9;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 16 / 9;
 }
 
 /* iframe – fullsize */
 .aua-showreel__video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
-/* Responsiv holat */
+/* =======================
+   RESPONSIVE
+   ======================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .aua-showreel__inner {
+    max-width: 100%;
+  }
+
+  .aua-showreel__frame {
+    border-radius: 28px;
+  }
+
+  .aua-showreel__video-shell {
+    border-radius: 24px;
+  }
+
+  .aua-showreel__label {
+    top: -12px;
+    padding: 12px 72px 4px 12px;
+    font-size: 12px;
+  }
+
+  .aua-showreel__caption {
+    bottom: -10px;
+    padding: 12px 12px 4px 12px;
+    font-size: 11px;
+  }
+
+  .aua-showreel__toggle {
+    padding: 12px 40px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-    .aua-showreel {
-        padding-top: 56px;
-        padding-bottom: 72px;
-    }
+  .aua-showreel {
+    padding-top: 56px;
+    padding-bottom: 40px;
+  }
 
-    .aua-showreel__frame {
-        border-radius: 26px;
-        padding: 16px 16px 24px;
-    }
+  .aua-showreel__frame {
+    border-radius: 22px;
+  }
 
-    .aua-showreel__video-shell {
-        border-radius: 22px;
-    }
+  .aua-showreel__video-shell {
+    width: 100%;
+    height: 200px;
+    border-radius: 18px;
+  }
 
-    .aua-showreel__label {
-        top: -24px;
-        left: 4px;
-        font-size: 12px;
-    }
+  /* Pills biroz kichraytirilgan */
+  .aua-showreel__label {
+    display: none;
+  }
 
-    .aua-showreel__caption {
-        position: static;
-        margin-top: 12px;
-        text-align: left;
-        max-width: none;
-    }
+  .aua-showreel__caption {
+    display: none;
+  }
 
-    .aua-showreel__toggle {
-        top: -22px;
-        padding-inline: 14px;
-        font-size: 12px;
-    }
+  .aua-showreel__toggle {
+    top: 0px;
+    width: 150px;
+    padding: 10px 16px;
+    border-radius: 0px 0 15px 15px;
+    font-size: 11px;
+    background: url(https://upsense.sg/wp-content/uploads/2024/02/dot.png;);
+    opacity: 1;
+    background-size: 6px;
+    mix-blend-mode: exclusion;
+    background-color: white;
+  }
+}
+
+/* Kichik ekranlar – pillar yanada ixcham */
+@media (max-width: 480px) {
+  .aua-showreel__label {
+    padding-right: 32px;
+  }
+
+  .aua-showreel__caption {
+    max-width: 65%;
+  }
+
+  .aua-showreel__toggle {
+    padding-inline: 20px;
+  }
 }

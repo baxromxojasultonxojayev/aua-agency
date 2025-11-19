@@ -7,6 +7,10 @@ import MouseTrail from "@/components/MouseTrail";
 import MouseCircle from "@/components/MouseTrail/MouseCircle";
 import AuaShowreelSection from "@/components/AuaShowreelSection";
 import AuaHelpCards from "@/components/AuaHelpCards";
+import AuaWhyUsSection from "@/components/AuaWhyUsSection";
+import AuaAdvantagesNumbers from "@/components/AuaAdvantagesNumbers";
+import AuaProjectsInclude from "@/components/AuaProjectsInclude";
+import AuaTestimonials from "@/components/AuaTestimonials";
 
 export default function HomePage() {
   return (
@@ -15,6 +19,10 @@ export default function HomePage() {
       <MainSection />
       <AuaShowreelSection />
       <AuaHelpCards />
+      <AuaWhyUsSection />
+      <AuaAdvantagesNumbers />
+      <AuaProjectsInclude />
+      <AuaTestimonials />
     </div>
   );
 }

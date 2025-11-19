@@ -1,0 +1,161 @@
+.aua-testimonials {
+  padding: 90px 0 80px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+
+  &__inner {
+    width: min(1150px, 100%);
+    margin-inline: 20px;
+  }
+
+  /* ===== Heading ===== */
+  &__heading {
+    margin: 0 0 54px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 500;
+    font-family: "Playfair Display", "Georgia", serif;
+
+    span {
+      color: #00c853;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+  }
+
+  /* ===== TESTIMONIAL SWIPER ===== */
+  &__swiper {
+    padding-bottom: 42px; // pagination uchun joy
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 52px;
+    row-gap: 40px;
+    align-items: flex-start;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 32px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: minmax(0, 1fr);
+      column-gap: 0;
+    }
+  }
+
+  &__card {
+    text-align: left;
+  }
+
+  &__text {
+    margin: 0 0 28px;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #222222;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__avatar-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #f2f2f2;
+  }
+
+  &__avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__author-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__author-name {
+    font-family: "trax", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111111;
+  }
+
+  &__author-role {
+    font-size: 14px;
+    color: #666666;
+    margin-top: 2px;
+  }
+
+  /* === Umumiy swiper pagination (ikkala swiper ham) === */
+  .swiper-pagination {
+    bottom: 0;
+    text-align: center;
+  }
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background: #b0b0b0;
+    opacity: 1;
+    margin: 0 4px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #00c853;
+  }
+
+  /* ===== Brands swiper ===== */
+  &__brands {
+    margin-top: 26px;
+    text-align: center;
+  }
+
+  &__brands-caption {
+    margin: 0 0 18px;
+    font-size: 14px;
+    color: #555555;
+  }
+
+  &__brands-swiper {
+    margin-top: 4px;
+    padding-bottom: 24px;
+
+    .swiper-wrapper {
+      align-items: center;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__brand {
+    font-size: 18px;
+    font-family: "Playfair Display", "Georgia", serif;
+    color: #9d9d9d;
+    white-space: nowrap;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}

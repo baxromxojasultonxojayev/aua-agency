@@ -99,7 +99,7 @@ export default function AuaTestimonials() {
   );
 
   return (
-    <section className="aua-testimonials">
+    <section className="aua-testimonials" data-aos="fade-up">
       <div className="aua-testimonials__inner">
         {/* ===== Heading ===== */}
         <h2 className="aua-testimonials__heading">

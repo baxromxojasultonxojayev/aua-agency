@@ -19,7 +19,7 @@ import "./style.scss";
 
 export default function AuaProjectsInclude() {
   return (
-    <section className="aua-projects">
+    <section className="aua-projects" data-aos="zoom-in">
       <div className="aua-projects__inner">
         {/* LEFT TEXT COLUMN */}
         <article className="aua-projects__left">

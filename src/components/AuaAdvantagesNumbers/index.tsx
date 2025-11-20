@@ -4,7 +4,7 @@ import "./style.scss";
 
 export default function AuaAdvantagesNumbers() {
   return (
-    <section className="aua-advantages">
+    <section className="aua-advantages" data-aos="fade-up">
       <div className="aua-advantages__inner">
         {/* LEFT CARD */}
         <article className="aua-advantages__card aua-advantages__card--left">

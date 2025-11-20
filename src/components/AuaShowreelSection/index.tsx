@@ -38,7 +38,7 @@ export default function AuaShowreelSection() {
   };
 
   return (
-    <section className="aua-showreel">
+    <section className="aua-showreel" data-aos="zoom-in">
       <div className="aua-showreel__inner">
         <p className="aua-showreel__label">
           <span>Webdesign Studio SG</span>

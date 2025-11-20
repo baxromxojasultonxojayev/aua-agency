@@ -57,7 +57,7 @@ export default function AuaWhyUsSection() {
   };
 
   return (
-    <section className="aua-whyus">
+    <section className="aua-whyus" data-aos="zoom-in">
       <div className="aua-whyus__inner">
         {/* LEFT CARD */}
         <article className="aua-whyus__card aua-whyus__card--left">

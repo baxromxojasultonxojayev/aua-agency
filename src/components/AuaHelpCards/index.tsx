@@ -4,7 +4,7 @@ import "./style.scss";
 
 export default function AuaHelpCards() {
   return (
-    <section className="aua-help">
+    <section className="aua-help" data-aos="fade-right">
       <div className="aua-help__inner">
         <article className="aua-help__card aua-help__card--intro">
           <h3 className="aua-help__title">

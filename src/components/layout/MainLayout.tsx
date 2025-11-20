@@ -13,14 +13,13 @@ export default function MainLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Initialize AOS once
   useEffect(() => {
     AOS.init({
-      duration: 800, // animatsiya davomiyligi
-      easing: "ease-out", // silliq effekt
-      once: false, // scroll qaytganida ham animatsiya bo‘lsin
-      mirror: true, // section yuqoriga qaytganda ham chiqsin
-      offset: 100, // qaysi masofada trigger bo‘lishi
+      duration: 800,
+      easing: "ease-out",
+      once: false,
+      mirror: true,
+      offset: 100,
     });
   }, []);
 

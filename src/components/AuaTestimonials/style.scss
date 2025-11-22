@@ -3,13 +3,18 @@
   background: #ffffff;
   display: flex;
   justify-content: center;
-
+  @media (max-width: 768px) {
+    padding: 0;
+    padding-bottom: 20px;
+  }
   &__inner {
     width: min(1150px, 100%);
     margin-inline: 20px;
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
   }
 
-  /* ===== Heading ===== */
   &__heading {
     margin: 0 0 54px;
     text-align: center;
@@ -29,31 +34,34 @@
     }
   }
 
-  /* ===== TESTIMONIAL SWIPER ===== */
   &__swiper {
-    padding-bottom: 42px; // pagination uchun joy
-  }
-
-  &__row {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: 52px;
-    row-gap: 40px;
-    align-items: flex-start;
-
-    @media (max-width: 992px) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      column-gap: 32px;
+    position: relative;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    height: 350px !important;
+    @media (max-width: 768px) {
+      padding: 20px;
+      height: 300px !important;
+    }
+    .swiper-slide {
+      display: flex;
+      height: auto;
     }
 
-    @media (max-width: 768px) {
-      grid-template-columns: minmax(0, 1fr);
-      column-gap: 0;
+    .swiper-pagination {
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      text-align: center;
     }
   }
 
   &__card {
     text-align: left;
+    height: 100%;
+    @media (max-width: 768px) {
+      text-align: center;
+    }
   }
 
   &__text {
@@ -66,6 +74,7 @@
   &__author {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
   }
 
@@ -103,12 +112,6 @@
     margin-top: 2px;
   }
 
-  /* === Umumiy swiper pagination (ikkala swiper ham) === */
-  .swiper-pagination {
-    bottom: 0;
-    text-align: center;
-  }
-
   .swiper-pagination-bullet {
     width: 6px;
     height: 6px;
@@ -121,9 +124,8 @@
     background: #00c853;
   }
 
-  /* ===== Brands swiper ===== */
   &__brands {
-    margin-top: 26px;
+    margin-top: 8px;
     text-align: center;
   }
 
@@ -134,8 +136,10 @@
   }
 
   &__brands-swiper {
-    margin-top: 4px;
-    padding-bottom: 24px;
+    position: relative;
+    margin-top: 8px;
+    padding-bottom: 40px;
+    height: 150px;
 
     .swiper-wrapper {
       align-items: center;
@@ -145,6 +149,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    .swiper-pagination {
+      bottom: 6px;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      height: 100px !important;
     }
   }
 
@@ -158,8 +172,4 @@
       font-size: 16px;
     }
   }
-}
-.swiper {
-  width: 100%;
-  height: 50vh;
 }

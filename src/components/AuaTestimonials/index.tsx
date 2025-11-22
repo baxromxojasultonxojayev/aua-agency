@@ -1,12 +1,12 @@
 "use client";
 
-import "./style.scss";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+
+import "./style.scss";
 
 type Testimonial = {
   id: number;
@@ -65,39 +65,7 @@ const BRANDS = [
   "Synapzter",
 ];
 
-const PER_TESTIMONIAL_SLIDE = 3;
-
-// Testimonials uchun 3 tadan slidelarga bo‘lamiz, bo‘sh o‘yinmasligi uchun wrap qilamiz
-function makeTestimonialSlides(
-  data: Testimonial[],
-  perSlide: number
-): Testimonial[][] {
-  const total = data.length;
-  const slides: Testimonial[][] = [];
-
-  if (total <= perSlide) {
-    slides.push(data);
-    return slides;
-  }
-
-  for (let start = 0; start < total; start += perSlide) {
-    const group: Testimonial[] = [];
-    for (let j = 0; j < perSlide; j++) {
-      const idx = (start + j) % total;
-      group.push(data[idx]);
-    }
-    slides.push(group);
-  }
-
-  return slides;
-}
-
 export default function AuaTestimonials() {
-  const testimonialSlides = makeTestimonialSlides(
-    TESTIMONIALS,
-    PER_TESTIMONIAL_SLIDE
-  );
-
   return (
     <section className="aua-testimonials" data-aos="fade-up">
       <div className="aua-testimonials__inner">
@@ -106,53 +74,53 @@ export default function AuaTestimonials() {
           Hear the <span>praise</span>
         </h2>
 
-        {/* ===== TESTIMONIAL SWIPER ===== */}
         <Swiper
           modules={[Pagination, Autoplay]}
           className="aua-testimonials__swiper"
           pagination={{ clickable: true }}
           autoplay={{
-            delay: 1000, // har 1 sekundda testimonial slide
+            delay: 1500,
             disableOnInteraction: false,
           }}
-          speed={600}
-          loop={testimonialSlides.length > 1}
+          speed={900}
+          loop={TESTIMONIALS.length > 1}
+          autoHeight={true}
+          slidesPerView={3}
+          spaceBetween={52}
+          breakpoints={{
+            0: { slidesPerView: 1, spaceBetween: 24 },
+            768: { slidesPerView: 2, spaceBetween: 32 },
+            1024: { slidesPerView: 3, spaceBetween: 52 },
+          }}
         >
-          {testimonialSlides.map((group, index) => (
-            <SwiperSlide key={index}>
-              <div className="aua-testimonials__row">
-                {group.map((item) => (
-                  <article
-                    key={item.id + "-" + index}
-                    className="aua-testimonials__card"
-                  >
-                    <p className="aua-testimonials__text">{item.text}</p>
+          {TESTIMONIALS.map((item) => (
+            <SwiperSlide key={item.id}>
+              <article className="aua-testimonials__card">
+                <p className="aua-testimonials__text">{item.text}</p>
 
-                    <div className="aua-testimonials__author">
-                      <div className="aua-testimonials__avatar-wrap">
-                        <img
-                          src={item.avatar}
-                          alt={item.name}
-                          className="aua-testimonials__avatar"
-                        />
-                      </div>
-                      <div className="aua-testimonials__author-info">
-                        <div className="aua-testimonials__author-name">
-                          {item.name}
-                        </div>
-                        <div className="aua-testimonials__author-role">
-                          {item.role}
-                        </div>
-                      </div>
+                <div className="aua-testimonials__author">
+                  <div className="aua-testimonials__avatar-wrap">
+                    <img
+                      src={item.avatar}
+                      alt={item.name}
+                      className="aua-testimonials__avatar"
+                    />
+                  </div>
+                  <div className="aua-testimonials__author-info">
+                    <div className="aua-testimonials__author-name">
+                      {item.name}
                     </div>
-                  </article>
-                ))}
-              </div>
+                    <div className="aua-testimonials__author-role">
+                      {item.role}
+                    </div>
+                  </div>
+                </div>
+              </article>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        {/* ===== BRAND SWIPER – 1ta slide = 1ta brand ===== */}
+        {/* ===== BRAND SWIPER ===== */}
         <div className="aua-testimonials__brands">
           <p className="aua-testimonials__brands-caption">
             Teamed up with awesome brands through the years.
@@ -163,16 +131,16 @@ export default function AuaTestimonials() {
             className="aua-testimonials__brands-swiper"
             pagination={{ clickable: true }}
             autoplay={{
-              delay: 1500, // logolar biroz sekinroq aylansin
+              delay: 1500,
               disableOnInteraction: false,
             }}
-            speed={500}
+            speed={900}
             loop={BRANDS.length > 1}
             slidesPerView={6}
             spaceBetween={40}
             breakpoints={{
-              0: { slidesPerView: 2, spaceBetween: 16 },
-              480: { slidesPerView: 3, spaceBetween: 20 },
+              0: { slidesPerView: 1, spaceBetween: 12 },
+              480: { slidesPerView: 2, spaceBetween: 16 },
               768: { slidesPerView: 4, spaceBetween: 28 },
               992: { slidesPerView: 5, spaceBetween: 32 },
               1200: { slidesPerView: 6, spaceBetween: 40 },

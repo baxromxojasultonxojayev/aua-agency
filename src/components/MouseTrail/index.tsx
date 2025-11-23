@@ -13,7 +13,6 @@ export default function MouseTrail() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // ==== Vars ====
     const win = {
       w: window.innerWidth,
       h: window.innerHeight,
@@ -22,7 +21,7 @@ export default function MouseTrail() {
     const mouse = {
       x: win.w * 0.5,
       y: win.h * 0.5,
-      lerpX: win.w * 0.5,
+      lerpX: win.w * 1.5,
       lerpY: win.h * 0.5,
     };
 
@@ -31,7 +30,7 @@ export default function MouseTrail() {
       colorHead: "#b6f93f",
       colorBody: "#68c316",
       colorTail: "#2D0ECE",
-      headWidth: 40,
+      headWidth: 30,
       tailWidth: 0,
       lerp: 0.1,
     };

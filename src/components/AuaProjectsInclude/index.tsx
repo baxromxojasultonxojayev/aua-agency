@@ -19,7 +19,7 @@ import "./style.scss";
 
 export default function AuaProjectsInclude() {
   return (
-    <section className="aua-projects" data-aos="zoom-in">
+    <section className="aua-projects">
       <div className="aua-projects__inner">
         {/* LEFT TEXT COLUMN */}
         <article className="aua-projects__left">
@@ -43,7 +43,10 @@ export default function AuaProjectsInclude() {
         <article className="aua-projects__right">
           {/* main 3x3 grid */}
           <div className="aua-projects__grid">
-            <div className="aua-projects__card aua-projects__card--primary">
+            <div
+              className="aua-projects__card aua-projects__card--primary"
+              data-aos="fade-right"
+            >
               <div className="aua-projects__icon">
                 <Code2 />
               </div>
@@ -54,7 +57,10 @@ export default function AuaProjectsInclude() {
               </div>
             </div>
 
-            <div className="aua-projects__card aua-projects__card--primary">
+            <div
+              className="aua-projects__card aua-projects__card--primary"
+              data-aos="fade-right"
+            >
               <div className="aua-projects__icon">
                 <PanelsTopLeft />
               </div>
@@ -65,7 +71,10 @@ export default function AuaProjectsInclude() {
               </div>
             </div>
 
-            <div className="aua-projects__card aua-projects__card--primary">
+            <div
+              className="aua-projects__card aua-projects__card--primary"
+              data-aos="fade-right"
+            >
               <div className="aua-projects__icon">
                 <Rocket />
               </div>
@@ -76,7 +85,10 @@ export default function AuaProjectsInclude() {
               </div>
             </div>
 
-            <div className="aua-projects__card aua-projects__card--primary">
+            <div
+              className="aua-projects__card aua-projects__card--primary"
+              data-aos="fade-right"
+            >
               <div className="aua-projects__icon">
                 <Smile />
               </div>
@@ -87,7 +99,10 @@ export default function AuaProjectsInclude() {
               </div>
             </div>
 
-            <div className="aua-projects__card aua-projects__card--primary">
+            <div
+              className="aua-projects__card aua-projects__card--primary"
+              data-aos="fade-right"
+            >
               <div className="aua-projects__icon">
                 <Gauge />
               </div>
@@ -98,7 +113,10 @@ export default function AuaProjectsInclude() {
               </div>
             </div>
 
-            <div className="aua-projects__card aua-projects__card--primary">
+            <div
+              className="aua-projects__card aua-projects__card--primary"
+              data-aos="fade-right"
+            >
               <div className="aua-projects__icon">
                 <BarChart3 />
               </div>
@@ -111,7 +129,10 @@ export default function AuaProjectsInclude() {
               </div>
             </div>
 
-            <div className="aua-projects__card aua-projects__card--primary">
+            <div
+              className="aua-projects__card aua-projects__card--primary"
+              data-aos="fade-right"
+            >
               <div className="aua-projects__icon">
                 <Globe2 />
               </div>
@@ -122,7 +143,10 @@ export default function AuaProjectsInclude() {
               </div>
             </div>
 
-            <div className="aua-projects__card aua-projects__card--primary">
+            <div
+              className="aua-projects__card aua-projects__card--primary"
+              data-aos="fade-right"
+            >
               <div className="aua-projects__icon">
                 <ShieldCheck />
               </div>
@@ -133,7 +157,10 @@ export default function AuaProjectsInclude() {
               </div>
             </div>
 
-            <div className="aua-projects__card aua-projects__card--primary">
+            <div
+              className="aua-projects__card aua-projects__card--primary"
+              data-aos="fade-right"
+            >
               <div className="aua-projects__icon">
                 <MonitorSmartphone />
               </div>

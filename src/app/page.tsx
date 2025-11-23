@@ -15,7 +15,9 @@ import AuaTestimonials from "@/components/AuaTestimonials";
 export default function HomePage() {
   return (
     <div className="aua-home">
-      <MouseTrail />
+      <div className="mouse-trial">
+        <MouseTrail />
+      </div>
       <MainSection />
       <AuaShowreelSection />
       <AuaHelpCards />

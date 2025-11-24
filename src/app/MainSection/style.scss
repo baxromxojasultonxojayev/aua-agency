@@ -19,7 +19,6 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-
   background-image: url("https://upsense.sg/wp-content/uploads/2024/03/Union-2-1.svg");
   background-position: center center;
   background-repeat: repeat;
@@ -27,7 +26,7 @@
 
   transform-origin: center;
   transform: scale(var(--hero-scale));
-  opacity: 0.8;
+  opacity: 0.6;
   transition: transform 0.1s ease-out;
 }
 

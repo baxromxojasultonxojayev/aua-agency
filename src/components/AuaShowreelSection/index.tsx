@@ -3,16 +3,14 @@
 import { useRef, useState } from "react";
 import "./style.scss";
 
-// YouTube video ID
-const YT_ID = "fS4cH2fky5M";
-
-// Toza URL (controls, info va boshqalar o‘chirilgan)
-const YT_URL = `https://www.youtube.com/embed/${YT_ID}?autoplay=1&mute=1&loop=1&playlist=${YT_ID}&controls=0&rel=0&showinfo=0&modestbranding=1&iv_load_policy=3&fs=0&playsinline=1&enablejsapi=1`;
+// iframe ichida ochiladigan ichki sahifa
+const IFRAME_SRC = "/showreel.html";
 
 export default function AuaShowreelSection() {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [muted, setMuted] = useState(true);
 
+  // hozircha YouTube komandalar kerak emas, lekin kodni qoldirsa bo'ladi
   const sendYTCommand = (func: "mute" | "unMute") => {
     const iframe = iframeRef.current;
     if (!iframe || !iframe.contentWindow) return;
@@ -23,7 +21,7 @@ export default function AuaShowreelSection() {
         func,
         args: [],
       }),
-      "*" // xohlasang bu yerga aniq origin qo‘yishing mumkin
+      "*"
     );
   };
 
@@ -40,34 +38,23 @@ export default function AuaShowreelSection() {
   return (
     <section className="aua-showreel" data-aos="zoom-in">
       <div className="aua-showreel__inner">
-        <p className="aua-showreel__label">
-          <span>Webdesign Studio SG</span>
-        </p>
-
-        <button
+        {/* Agar label / caption / tugma kerak bo'lsa keyin ochasiz */}
+        {/* <button
           type="button"
           className="aua-showreel__toggle"
           onClick={handleToggleMute}
         >
           <span>{muted ? "Unmute" : "Mute"}</span>
-        </button>
+        </button> */}
 
-        <p className="aua-showreel__caption">
-          <span>
-            Our websites get results – from boosting traffic to improving
-            conversion rates to generating online leads.
-          </span>
-        </p>
-
-        {/* Katta rounded container */}
         <div className="aua-showreel__frame">
           <div className="aua-showreel__video-shell">
             <iframe
               ref={iframeRef}
               className="aua-showreel__video"
-              src={YT_URL}
+              src={IFRAME_SRC}
               title="AUA Showreel"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
             />
           </div>
         </div>

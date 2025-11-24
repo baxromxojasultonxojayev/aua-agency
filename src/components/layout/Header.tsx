@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import "./layout.scss";
 import { useState } from "react";
+import Logo from "./logo.svg";
+import "./layout.scss";
+import Image from "next/image";
 
 const nav = [
   { href: "#solutions", label: "Solutions +" },
@@ -21,8 +23,10 @@ export default function Header() {
     <header className="aua-header">
       <div className="aua-header__inner">
         <div className="aua-header__pill">
+          <img src={Logo} alt="" />
           <Link href="/" className="aua-header__logo">
-            <span className="aua-header__logo-mark">A</span>
+            <Image src={Logo} width={45} height={45} alt="" />
+            {/* <span className="aua-header__logo-mark">A</span> */}
           </Link>
           <nav className="aua-header__nav">
             {nav.map((item) => (

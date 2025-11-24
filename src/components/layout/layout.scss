@@ -55,6 +55,10 @@
   background: #000;
   color: #fff;
   font-size: 24px;
+  &:hover{
+    transform: rotate(4deg);
+    transition-duration: 0.5s;
+  }
 }
 
 .aua-header__logo-mark {
